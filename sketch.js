@@ -25,9 +25,9 @@ var BOX2 = new Boxthing;
 
 
 function setup() {
- createCanvas(300,300);
+    createCanvas(300,300);
  
- background(0,0,0); 
+    background(0,0,0); 
  
 }
 
@@ -38,11 +38,15 @@ function draw() {
 }
 
 function ChangeColors(){
- background(0,0,0);
+    var speeed = parseInt(document.getElementById("inputZone").value);
     
- BOX.updateColor(50,BOX.currentXY.y + 1);   
- BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);
+    background(0,0,0);
     
- print(BOX2.mooo);
+    BOX.updateColor(50,BOX.currentXY.y + speeed);   
+    BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);
+    
+    print(BOX2.mooo);
+    print("your current speed is: " , speeed);
+
 }
 
