@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-    background(0,0,0);
+  
     speed = parseInt(document.getElementById("inputZone").value);   //setting speed value to the input from html
     ChangeColors();
   
