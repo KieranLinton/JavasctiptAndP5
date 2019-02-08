@@ -45,7 +45,7 @@ function ChangeColors(){
     
    
     
-    BOX.updateColor(50,BOX.currentXY.y + speed);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
+    BOX.updateColor(mouseX,MOUSEY);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
     BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);   //Activating the function attatched to the object that colors and draws it,
                                                                 //and sets its position parameters to x = the first box + 100, and y = the same as first box(BOX)
     
