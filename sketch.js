@@ -43,8 +43,7 @@ function draw() {
 function ChangeColors(){
     
     
-    background(0,0,0);                                     //refreshing the background, draws over the brevious draws, so esencially cleans the canvas
-    
+   
     
     BOX.updateColor(50,BOX.currentXY.y + speed);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
     BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);   //Activating the function attatched to the object that colors and draws it,
