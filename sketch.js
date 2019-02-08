@@ -33,8 +33,7 @@ function setup() {
     background(0,0,0);        //making the backround black
  
 }
-fvfbdfbz =false
-fvfbdfbz =false
+
 function draw() {
     speeed = parseInt(document.getElementById("inputZone").value);   //setting speed value to the input from html
     ChangeColors();
