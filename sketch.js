@@ -1,6 +1,5 @@
 /* eslint-env es6 */
-
-var speeed = null;
+var speed = 3;
 
 class Boxthing {
     constructor(){           //all class variables you want to access ouytside the class have to go in the constructor
@@ -35,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-    speeed = parseInt(document.getElementById("inputZone").value);   //setting speed value to the input from html
+    speed = parseInt(document.getElementById("inputZone").value);   //setting speed value to the input from html
     ChangeColors();
   
     
@@ -47,7 +46,7 @@ function ChangeColors(){
     background(0,0,0);                                     //refreshing the background, draws over the brevious draws, so esencially cleans the canvas
     
     
-    BOX.updateColor(50,BOX.currentXY.y + speeed);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
+    BOX.updateColor(50,BOX.currentXY.y + speed);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
     BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);   //Activating the function attatched to the object that colors and draws it,
                                                                 //and sets its position parameters to x = the first box + 100, and y = the same as first box(BOX)
     
@@ -56,7 +55,7 @@ function ChangeColors(){
     }
     
     print(BOX2.mooo);
-    print("your current speed is: " , speeed);       //some debug
+    print("your current speed is: " , speed);       //some debug
 
 }
 
