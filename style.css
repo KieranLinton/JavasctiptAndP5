@@ -1,9 +1,13 @@
 html {
         font-family: 'Montserrat', sans-serif;
-   
+        margin: 50px;
 
 }
 
 h3{
     color: #322E33;
+}
+
+#secondPart{
+    margin-top: 50px;
 }
