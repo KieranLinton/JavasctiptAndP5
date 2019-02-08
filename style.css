@@ -11,3 +11,13 @@ h3{
 #secondPart{
     margin-top: 50px;
 }
+#clearCanvasButton{
+   
+    border-radius: 10px;
+    background: #9C9590;
+    padding: 10px;
+    cursor: pointer;
+}
+#canvasStuff{
+    cursor: none;
+}

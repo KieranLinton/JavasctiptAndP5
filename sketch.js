@@ -29,7 +29,7 @@ var BOX2 = new Boxthing; //and another
 function setup() {
     var mycanvas = createCanvas(600, 600); //making a canvas
     mycanvas.parent("canvasStuff"); //putting the casnvas inside a DIV to controll it easyer
-    background(0, 0, 0); //making the backround black
+    updateCanvas(); //making the backround black
 
 }
 
@@ -57,4 +57,7 @@ function ChangeColors() {
     print(BOX2.mooo);
     print("your current speed is: ", speed); //some debug
 
-} //
+}
+function updateCanvas(){
+    background(0,0,0);
+}
