@@ -2,62 +2,59 @@
 var speed = 3;
 
 class Boxthing {
-    constructor(){           //all class variables you want to access ouytside the class have to go in the constructor
-        this.currentXY = {      //creating an object called currentCY that has, the x and y, set to null for now
+    constructor() { //all class variables you want to access ouytside the class have to go in the constructor
+        this.currentXY = { //creating an object called currentCY that has, the x and y, set to null for now
             X: null,
-            y:  null
+            y: null
         }
-        this.mooo = "hey you"     //and another variable, which in this case is a string
+        this.mooo = "hey you" //and another variable, which in this case is a string
     }
-    updateColor(positionx, positiony){
-        if(speed > 0 && speed != null){
-            noStroke();                                   //dont want a border on the circle
+    updateColor(positionx, positiony) {
+        if (speed > 0 && speed != null) {
+            noStroke(); //dont want a border on the circle
             fill(random(255), random(255), random(255)); //setting fill color to some random rgb
-            ellipse(positionx, positiony, 50);             //after setting up all that, we now draw a circle
+            ellipse(positionx, positiony, 50); //after setting up all that, we now draw a circle
             this.currentXY.X = positionx;
-            this.currentXY.y = positiony;   // and we set the classes variables to out current position
+            this.currentXY.y = positiony; // and we set the classes variables to out current position
         }
     }
 }
 
 
 
-var BOX = new Boxthing;         //creating a new object of class Boxthing
-var BOX2 = new Boxthing;         //and another
+var BOX = new Boxthing; //creating a new object of class Boxthing
+var BOX2 = new Boxthing; //and another
 
 
 function setup() {
-    createCanvas(3000,3000);    //setting the canvas
- 
-    background(0,0,0);        //making the backround black
- 
+    var mycanvas = createCanvas(600, 600); //making a canvas
+    mycanvas.parent("canvasStuff"); //putting the casnvas inside a DIV to controll it easyer
+    background(0, 0, 0); //making the backround black
+
 }
 
 function draw() {
-  
-    speed = parseInt(document.getElementById("inputZone").value);   //setting speed value to the input from html
+
+    speed = parseInt(document.getElementById("inputZone").value); //setting speed value to the input from html
     ChangeColors();
-  
-    
+
+
 }
 
-function ChangeColors(){
-    
-    
-   
-    
-    BOX.updateColor(mouseX,mouseY);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
-    BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);   //Activating the function attatched to the object that colors and draws it,
-                                                                //and sets its position parameters to x = the first box + 100, and y = the same as first box(BOX)
-    
-    if(BOX.currentXY.y > 300){
-        BOX.updateColor(BOX.currentXY.x, 0);    //if it goes off the canvas, send it to the top again
+function ChangeColors() {
+
+
+
+
+    BOX.updateColor(mouseX, mouseY); //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
+    BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y); //Activating the function attatched to the object that colors and draws it,
+                                                              //and sets its position parameters to x = the first box + 100, and y = the same as first box(BOX)
+
+    if (BOX.currentXY.y > 600) {
+        BOX.updateColor(BOX.currentXY.x, 0); //if it goes off the canvas, send it to the top again
     }
-    
+
     print(BOX2.mooo);
-    print("your current speed is: " , speed);       //some debug
+    print("your current speed is: ", speed); //some debug
 
 } //
-
-
-
