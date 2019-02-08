@@ -27,7 +27,7 @@ var BOX2 = new Boxthing;         //and another
 
 
 function setup() {
-    createCanvas(300,300);    //setting the canvas
+    createCanvas(3000,3000);    //setting the canvas
  
     background(0,0,0);        //making the backround black
  
