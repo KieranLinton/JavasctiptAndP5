@@ -2,7 +2,7 @@
 
 class Boxthing {
     constructor(){           //all class variables you want to access ouytside the class have to go in the constructor
-        this.currentXY = {      //creating a tree called currentCY that has, the x and y, set to null for now
+        this.currentXY = {      //creating an object called currentCY that has, the x and y, set to null for now
             X: null,
             y:  null
         }
@@ -33,6 +33,7 @@ function setup() {
 
 function draw() {
  
+    ChangeColors();
   
     
 }
@@ -45,6 +46,10 @@ function ChangeColors(){
     BOX.updateColor(50,BOX.currentXY.y + speeed);               //Activating the function attatched to the object that colors and draws it, and sets its position parameters to x= 50 and Y= to its current one + the speed.
     BOX2.updateColor(BOX.currentXY.X + 100, BOX.currentXY.y);   //Activating the function attatched to the object that colors and draws it,
                                                                 //and sets its position parameters to x = the first box + 100, and y = the same as first box(BOX)
+    
+    if(BOX.currentXY.y > 300){
+        BOX.updateColor(BOX.currentXY.x, 0);    //if it goes off the canvas, send it to the top again
+    }
     
     print(BOX2.mooo);
     print("your current speed is: " , speeed);       //some debug
