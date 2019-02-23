@@ -54,10 +54,11 @@ function ChangeColors() {
         BOX.updateColor(BOX.currentXY.x, 0); //if it goes off the canvas, send it to the top again
     }
 
-    print(BOX2.mooo);
-    print("your current speed is: ", speed); //some debug
+    //print(BOX2.mooo);
+    //print("your current speed is: ", speed); //some debug
 
 }
 function updateCanvas(){
     background(0,0,0);
 }
+
